@@ -1,0 +1,25 @@
+import ProductDetail from '@/components/Products/ProductDetail';
+import SwiperSection from '@/components/SwiperSection';
+
+const SIMILAR_PRODUCTS = [
+    { image: '/images/sh-1.png', title: 'Nike Air Max Plus', category: "Men's Shoes", price: '2,590 EGP', colors: ['#9ea0a3', '#c84c5e', '#56ad7b'] },
+    { image: '/images/image 10.png', title: 'Nike Air Max Plus', category: "Men's Shoes", price: '2,590 EGP', colors: ['#c4a882', '#000000', '#4dd9ac'] },
+    { image: '/images/sh-1.png', title: 'Nike Air Max Plus', category: "Men's Shoes", price: '2,590 EGP', colors: ['#1a1a2e', '#e63946'] },
+    { image: '/images/sh-2.png', title: 'Nike Air Max Plus', category: "Men's Shoes", price: '2,590 EGP', colors: ['#f5a623', '#e88080'] },
+    { image: '/images/image 9.png', title: 'Nike Air Max Plus', category: "Men's Shoes", price: '2,590 EGP', colors: ['#9ea0a3', '#1a237e'] },
+];
+
+export default async function ProductDetailPage({
+    params,
+}: {
+    params: Promise<{ id: string; locale: string }>;
+}) {
+    const { id } = await params;
+
+    return (
+        <main className="my-10">
+            <ProductDetail id={id} />
+
+        </main>
+    );
+}
